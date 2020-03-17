@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+# Update the local ruby-advisory-db advisory database
+echo '-------------------------------'
+echo 'bundle exec bundle-audit update'
+docker-compose run --rm web bundle exec bundle-audit update
+
+# Audit the gems listed in Gemfile.lock for vulnerabilities
+echo '------------------------'
+echo 'bundle exec bundle-audit'
+docker-compose run --rm web bundle exec bundle-audit

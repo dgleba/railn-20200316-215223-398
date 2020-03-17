@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+
+# Checks for security vulnerabilities
+# -A: runs all checks
+# -q: output the report only; suppress information warnings
+# -w2: level 2 warnings (medium and high only)
+echo '---------------------------------------'
+echo 'bundle exec brakeman -Aq -w2 --no-pager'
+docker-compose run --rm web bundle exec brakeman -Aq -w2 --no-pager
