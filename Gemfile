@@ -131,3 +131,5 @@ group :development do
   gem 'binding_of_caller', '0.8.0'
 end
 # END: Better Errors
+
+gem 'pry-rails', '0.3.9' # Improves the screen output in the Rails console
