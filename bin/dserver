@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+bin/dbundle
+bin/dmigrate
+echo '--------------------------------------------'
+echo 'rm -f /home/winner/myapp/tmp/pids/server.pid'
+docker-compose run --rm web rm -f /home/winner/myapp/tmp/pids/server.pid
+
+echo '----------------------------------'
+echo 'View page at http://localhost:3000'
+docker-compose up web
