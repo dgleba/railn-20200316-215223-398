@@ -57,6 +57,7 @@ Layout/LineLength:
     - test/helpers/application_helper_test.rb
     - config/initializers/devise.rb
     - app/models/user.rb
+    - app/models/admin.rb
 # END: Layout/LineLength
 
 # BEGIN: Style/ClassAndModuleChildren
@@ -85,6 +86,7 @@ Style/SymbolArray:
 Lint/AssignmentInCondition:
   Exclude:
     - app/models/user.rb
+    - app/models/admin.rb
 # END: Lint/AssignmentInCondition
 
 # BEGIN: Layout/TrailingWhitespace
