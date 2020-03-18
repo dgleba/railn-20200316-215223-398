@@ -19,7 +19,7 @@ services:
       - --port=3000
     ports:
       - "3000:3000"
-    depends_on:
+    links:
       - mailcatcher
     #POSTGRES#env_file:
       #POSTGRES#- .env/development/database
@@ -28,9 +28,9 @@ services:
       #POSTGRES#- database
 
   mailcatcher:
-    image: rordi/docker-mailcatcher
-    container_name: mailcatcher
+    image: yappabe/mailcatcher
     ports:
+      - "1025:1025"
       - "1080:1080"
 
   #POSTGRES#database:
