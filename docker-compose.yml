@@ -31,7 +31,7 @@ services:
     image: rordi/docker-mailcatcher
     container_name: mailcatcher
     ports:
-      - 1080:1080
+      - "1080:1080"
 
   #POSTGRES#database:
     #POSTGRES#image: postgres
