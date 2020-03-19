@@ -3,7 +3,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # END: needed for email confirmations
   # BEGIN: mailcatcher configuration
-  # From http://mailcatcher.me/
+  # From https://stackoverflow.com/questions/37684053/docker-connection-refused-for-every-other-running-services
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { address: 'mailcatcher', port: 1025 }
   # END: mailcatcher configuration
